@@ -1,0 +1,133 @@
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-black);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Page Layout grid elements */
+.main-content {
+  margin-top: 0;
+  padding-bottom: 50px;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Category Filter Header info */
+.category-header {
+  padding: 100px 4% 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.category-title {
+  font-size: 2.2rem;
+  color: var(--text-main);
+}
+
+.category-dropdown-btn {
+  background-color: rgba(0,0,0,0.8);
+  border: 1px solid var(--text-muted);
+  color: var(--text-main);
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+/* Search results Grid layout */
+.search-results-container {
+  padding: 100px 4% 50px;
+  min-height: 80vh;
+}
+
+.search-title {
+  font-size: 1.8rem;
+  color: var(--text-sub);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.search-title span {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.search-results-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px 10px;
+}
+
+/* Empty watch list / search results details */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  color: var(--text-sub);
+  text-align: center;
+}
+
+.empty-state-title {
+  font-size: 1.5rem;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+/* Footer Section */
+.footer-container {
+  padding: 60px 4% 30px;
+  background-color: var(--bg-black);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  list-style: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer-copy {
+  margin-top: 10px;
+}
+
+/* Media adjustments */
+@media (max-width: 1200px) {
+  .search-results-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .search-results-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .search-results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
